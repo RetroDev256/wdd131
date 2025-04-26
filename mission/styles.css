@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    font-weight: 550;
+    font-size: 24px;
 }
 
 html, body {
@@ -31,11 +33,6 @@ h1, h3, p {
 
 .italic {
     font-style: italic;
-}
-
-* {
-    font-weight: 550;
-    font-size: 24px;
 }
 
 h1 {
