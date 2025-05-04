@@ -1,4 +1,4 @@
-const mode_selector = document.getElementById("display");
+const mode_selector = document.getElementById("display_mode");
 const logo_image = document.getElementById("logo");
 const body = document.querySelector("body");
 
