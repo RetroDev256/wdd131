@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #acbfcc;
+    font-family: Roboto;
+    line-height: 1.5em;
+}
+
+header {
+    background-color: black;
+    padding: 50px;
+
+}
+
+header img {
+    width: 25%;
+    display: block;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 900px;
+    padding: 25px 75px;
+    margin: 0 auto;
+}
+
+p {
+    padding: 10px;
+}
+
+li {
+    padding-bottom: 10px;
+}
+
+#char-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+footer {
+    background-color: black;
+}
+
+footer p {
+    text-align: center;
+    color: #acbfcc;
+
+    padding: 50px;
+    margin: 0;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+#starship {
+    /* https://live.staticflickr.com/1753/27901489567_327c3d6687_b.jpg */
+    text-align: center;
+}
+
+#starship img {
+    width: 50%;
+}

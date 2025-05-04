@@ -64,3 +64,32 @@ const element_by_id_selector_2 = document.getElementById("myIDName");
 // these return more than one element,as they could have more than one elements per class and tag
 const element_by_class_selector_2 = document.getElementsByClassName("myClassName");
 const element_by_html_tag_selector_2 = document.getElementsByTagName("div");
+
+const body = document.querySelector("body");
+body.innerHTML += "<p> This is an appended paragraph. </p>";
+body.innerHTML += "<canvas width=\"256\" height=\"256\"></canvas>";
+
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+// Define width and height of the canvas
+const width = canvas.width;
+const height = canvas.height;
+
+// Create a new blank ImageData object (all pixels transparent black)
+const imageData = ctx.createImageData(width, height);
+const data = imageData.data; // Uint8ClampedArray - [R, G, B, A, R, G, B, A, ...]
+
+// Write a gradient into the pixel array
+for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+        const index = (y * width + x) * 4;
+        data[index] = x % 256;       // Red
+        data[index + 1] = y % 256;   // Green
+        data[index + 2] = 128;       // Blue
+        data[index + 3] = 255;       // Alpha (fully opaque)
+    }
+}
+
+// Put the modified pixel data back onto the canvas
+ctx.putImageData(imageData, 0, 0);

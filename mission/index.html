@@ -6,14 +6,20 @@
     <meta name="description" content="personal mission statement">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
     <title>Mission Statement</title>
 </head>
 
-<body>
+<body class="dark">
+    <select name="Display" id="display">
+        <option value="dark">Dark Mode</option>
+        <option value="light">Light Mode</option>
+    </select>
+    
     <main>
         <div id="inner">
             <h1> MISSION STATEMENT </h1>
-            <h3> BRIGHAM YOUNG UNIVERSITY-IDAHO </h3>
+            <h2> BRIGHAM YOUNG UNIVERSITY-IDAHO </h2>
             <hr>
             <p>
                 Brigham Young University-Idaho was founded and is supported and guided by The Church of Jesus Christ of
@@ -48,7 +54,7 @@
                     </p>
                 </li>
             </ol>
-            <img src="logo.png" alt="BYUI logo">
+            <img id="logo" src="logo_dark.png" alt="BYUI logo">
         </div>
     </main>
 </body>
