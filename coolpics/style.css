@@ -8,11 +8,12 @@
 }
 
 #menu {
+    cursor: pointer;
     margin: 0 auto;
     display: none;
 }
 
-#menu_links {
+#links {
     padding: 16px;
     list-style: none;
     display: flex;
@@ -107,17 +108,17 @@ footer {
         display: block;
     }
 
-    #menu_links {
-        display: none;
+    .hide_links {
+        display: none !important;
+    }
+
+    #links {
+        flex-direction: column;
     }
 }
 
 @media screen and (max-width: 800px) {
     #gallery {
         grid-template-columns: 1fr;
-    }
-
-    #menu_links {
-        display: block;
     }
 }
