@@ -1,0 +1,24 @@
+#todo_list {
+    width: 300px;
+}
+
+#todo_list>li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    padding: 0.5em;
+}
+
+#todo_list p {
+    margin: 0;
+}
+
+#todo_list span {
+    cursor: pointer;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: gray;
+}
