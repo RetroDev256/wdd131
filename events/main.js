@@ -5,11 +5,12 @@ function newTask() {
     const task = document.getElementById("todo");
     // render out the list 
     list.innerHTML += `
-    <li> ${task.value}
-      <div>
-        <span data-function="delete">❎</span>
-        <span data-function="complete">✅</span>
-      </div>
+    <li>
+        <p> ${task.value} </p>
+        <div>
+            <span data-function="delete"> ❌ </span>
+            <span data-function="complete"> ✅ </span>
+        </div>
     </li>`
 }
 
