@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 16px;
+}
+
+#student_container {
+    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

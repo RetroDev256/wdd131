@@ -20,7 +20,6 @@ modal.addEventListener("click", (event) => {
     }
 });
 
-
 // Note 2.
 //     The rubric requires this function. It is not required.
 //     The function above already handles clicking on the close

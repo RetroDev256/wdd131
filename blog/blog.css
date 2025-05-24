@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e5edff;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 200;
+    margin-block: 48px;
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+    margin-block: 16px;
+    border-block: 2px solid #062b30;
+}
+
+#nav_links {
+    gap: 1px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding-inline: 16px;
+    justify-content: right;
+}
+
+nav a {
+    font-size: 24px;
+    font-weight: 600;
+    color: #270043;
+    margin-block: 1px;
+    padding-block: 6px;
+    padding-inline: 16px;
+    text-decoration: none;
+    background-color: #b3c1ff;
+}
+
+nav a:hover {
+    color: #270043;
+    background-color: #95a9ff;
+}
+
+#book_list {
+    grid-row: 1;
+    width: 100%;
+    row-gap: 16px;
+    height: min-content;
+}
+
+.book {
+    margin-bottom: 16px;
+    width: 100%;
+    display: flex;
+    color: #220404;
+}
+
+.book_info {
+    margin: 16px;
+    min-width: 192px;
+    line-height: 1.5;
+}
+
+.book_cover {
+    width: 100%;
+    max-width: 256px;
+    border-radius: 8px;
+}
+
+.book_description {
+    gap: 16px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding-inline: 16px;
+    flex-direction: column;
+    border-left: 2px dotted #062b30;
+}
+
+.book_summary {
+    font-style: italic;
+}
+
+.book_title {
+    color: #006142;
+}
+
+#filters {
+    width: 100%;
+    display: grid;
+    row-gap: 16px;
+    padding: 16px;
+    height: 256px;
+    align-items: center;
+    border-radius: 16px;
+    background-color: #edf2fd;
+    border: 2px solid #062b30;
+    grid-template-columns: 96px minmax(0, 1fr);
+}
+
+#filters * {
+    display: flex;
+    height: 100%;
+    justify-content: right;
+    align-items: center;
+    padding-inline: 16px;
+}
+
+#filters select {
+    border-radius: 8px;
+    background-color: #dfe6ff;
+}
+
+#filters select:hover {
+    background-color: #cad5ff;
+}
+
+main {
+    gap: 64px;
+    width: 100%;
+    flex-grow: 1;
+    display: grid;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding-inline: 16px;
+    grid-template-columns: 5fr 2fr;
+}
+
+@media (max-width: 1024px) {
+    #book_list {
+        grid-row: 2;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-swidth, initial-scale=1.0">
+    <meta name="description" content="Book Blog">
+    <meta name='author' content="Eric Petersen">
+    <link rel="stylesheet" href="blog.css">
+    <script defer src="blog.js"></script>
+    <title>Book Blog</title>
+</head>
+
+<body>
+    <header>
+        <h1> Kids Read For Fun </h1>
+        <nav>
+            <div id="nav_links">
+                <a href="#"> About </a>
+                <a href="#"> Archive </a>
+                <a href="#"> Search </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="filters">
+            <label for="filter_sort"> Sort: </label>
+            <select id="filter_sort" name="filter_sort">
+                <option value="all"> Unsorted </option>
+                <option value="alphabetic"> Alphabetic </option>
+                <option value="rating"> Rating </option>
+                <option value="release_date"> Release Date </option>
+                <option value="genre"> Genre </option>
+            </select>
+
+            <label for="filter_age"> Age: </label>
+            <select id="filter_age" name="filter_age">
+                <option value="all"> Unfiltered </option>
+                <option value="pre_teen"> Up To 12 Years Old </option>
+                <option value="teenage"> 13 To 19 Years Old </option>
+                <option value="adult"> 20 Or More Years Old </option>
+            </select>
+
+            <label for="filter_genre"> Genre: </label>
+            <select id="filter_genre" name="filter_genre">
+                <option value="all"> Unfiltered </option>
+                <option value="fantasy"> Fantasy </option>
+                <option value="romance"> Romance </option>
+                <option value="mystery"> Mustery </option>
+                <option value="fiction"> Fiction </option>
+                <option value="non_fiction"> Non-Fiction </option>
+            </select>
+
+            <label for="filter_rating"> Rating: </label>
+            <select id="filter_rating" name="filter_rating">
+                <option value="all"> Unfiltered </option>
+                <option value="five"> Five Stars </option>
+                <option value="four_five"> Four To Five Stars </option>
+                <option value="three_five"> Three To Five Stars </option>
+                <option value="two_five"> Two To Five Stars </option>
+            </select>
+        </div>
+
+        <ul id="book_list"></ul>
+    </main>
+
+    <footer>
+        <p> &copy;
+            <span id="year"></span>
+            Eric Petersen. All rights reserved.
+        </p>
+        <script>
+            // keep the footer copyright year up-to-date
+            const footer_year = document.getElementById("year");
+            footer_year.textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+
+</html>
