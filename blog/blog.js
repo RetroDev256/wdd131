@@ -29,19 +29,19 @@ const book_list = [
 const html_list = document.getElementById("book_list");
 book_list.forEach((book) => {
     html_list.innerHTML += `
-        <div class="book" id="book_${book.id}">
+        <li class="book" id="book_${book.id}">
             <div class="book_info">
-                <h3 class="book_release_date"> ${book.date} </h3>
+                <h1 class="book_release_date"> ${book.date} </h1>
                 <p class="book_age_ranges"> ${book.ages} </p>
                 <p class="book_genre"> ${book.genre} </p>
                 <p class="book_rating"> ${book.stars} </p>
             </div>
 
             <div class="book_description">
-                <h2 class="book_title"> ${book.title} </h2>
+                <h1 class="book_title"> ${book.title} </h1>
                 <img class="book_cover" alt="${book.imgAlt}" src="${book.imgSrc}">
                 <p class="book_summary"> ${book.description} </p>
             </div>
-        </div>
+        </li>
     `;
 });

@@ -76,6 +76,10 @@ nav a:hover {
     line-height: 1.5;
 }
 
+.book_info h1 {
+    font-size: 1.25em;
+}
+
 .book_cover {
     width: 100%;
     max-width: 256px;
@@ -97,6 +101,7 @@ nav a:hover {
 }
 
 .book_title {
+    font-size: 1.5em;
     color: #006142;
 }
 
