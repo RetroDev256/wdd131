@@ -17,6 +17,24 @@ body {
     justify-content: space-between;
 }
 
+#skip_to_main_content {
+    top: -64px;
+    height: 64px;
+    display: flex;
+    color: white;
+    font-size: 32px;
+    font-weight: 900;
+    position: absolute;
+    align-items: center;
+    padding-inline: 16px;
+    background-color: black;
+    border-bottom-right-radius: 16px;
+}
+
+#skip_to_main_content:focus {
+    top: 0px;
+}
+
 header h1 {
     font-size: 48px;
     font-weight: 200;
