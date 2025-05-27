@@ -24,7 +24,7 @@ const book_list = [
         genre: 'Fantasy',
         stars: '⭐⭐⭐⭐'
     }
-]
+];
 
 const html_list = document.getElementById("book_list");
 book_list.forEach((book) => {
