@@ -92,6 +92,7 @@ nav a:hover {
     margin: 16px;
     min-width: 192px;
     line-height: 1.5;
+    text-align: right;
 }
 
 .book_info h1 {
