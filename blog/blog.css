@@ -82,17 +82,17 @@ nav a:hover {
 }
 
 .book {
-    margin-bottom: 16px;
     width: 100%;
     display: flex;
     color: #220404;
+    margin-bottom: 16px;
 }
 
 .book_info {
-    margin: 16px;
-    min-width: 192px;
+    min-width: 224px;
     line-height: 1.5;
     text-align: right;
+    margin-bottom: 16px;
     padding-inline: 16px;
     border-right: 2px dotted #062b30;
 }
@@ -110,7 +110,9 @@ nav a:hover {
 .book_description {
     gap: 16px;
     flex-grow: 1;
+    margin: 16px;
     display: flex;
+    margin-top: 0px;
     align-items: center;
     flex-direction: column;
 }
