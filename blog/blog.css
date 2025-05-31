@@ -93,6 +93,8 @@ nav a:hover {
     min-width: 192px;
     line-height: 1.5;
     text-align: right;
+    padding-inline: 16px;
+    border-right: 2px dotted #062b30;
 }
 
 .book_info h1 {
@@ -110,9 +112,7 @@ nav a:hover {
     flex-grow: 1;
     display: flex;
     align-items: center;
-    padding-inline: 16px;
     flex-direction: column;
-    border-left: 2px dotted #062b30;
 }
 
 .book_summary {
