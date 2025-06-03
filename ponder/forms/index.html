@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo of an input form">
+    <meta name="author" content="Eric Petersen">
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <title> Form Demo </title>
+</head>
+
+<body>
+    <header>
+        <h1> Checkout </h1>
+    </header>
+
+    <form id="checkout" action="completed.html">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="eric@alloc.dev" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4"></textarea>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="payment">Payment Method:</label>
+        <select id="payment" name="payment" required>
+            <option value="credit">Credit Card</option>
+            <option value="paypal">PayPal</option>
+        </select>
+
+        <div id="credit_input">
+            <label for="credit">Credit Card Number:</label>
+            <input type="password" id="credit" name="credit">
+        </div>
+
+        <div id="paypal_input">
+            <label for="paypal">PayPal Username:</label>
+            <input type="password" id="paypal" name="paypal">
+        </div>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+</body>
+
+</html>
