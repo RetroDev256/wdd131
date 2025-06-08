@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Eric Petersen">
+    <meta name="description" content="Credit Card | Eric Petersen">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <title> Credit Card | Eric Petersen </title>
+</head>
+
+<body>
+    <form id="card_entry">
+        <div id="card_view">
+            <div id="card_front">
+                <div id="total"> TOTAL: $539 </div>
+                <svg id="card_icon" viewBox="0 0 512 300">
+                    <rect width="512" height="300" fill="#e75" ry="32" />
+                    <rect x="64" y="64" width="110" height="69" fill="#ed8" ry="16" />
+                    <rect x="60" y="200" width="180" height="24" fill="#a53" />
+                    <rect x="272" y="200" width="180" height="24" fill="#a53" />
+                    <rect x="125" width="16" height="150" fill="#e75" />
+                    <rect y="103" width="130" height="16" fill="#e75" />
+                    <rect x="130" y="80" width="50" height="16" fill="#e75" />
+                </svg>
+                <div id="number_div">
+                    <label for="card_number"> CARD NUMBER </label>
+                    <input id="card_number" name="card_number" type="text" inputmode="numeric" pattern="\d*"
+                        placeholder="1234 5678 9101 1020" minlength="16" maxlength="16" required>
+                </div>
+                <div id="holder_div">
+                    <label for="card_holder"> CARD HOLDER </label>
+                    <input id="card_holder" name="card_holder" type="text" placeholder="John Doe" required>
+                </div>
+                <div id="expiration_div">
+                    <label for="card_expiration"> EXPIRATION </label>
+                    <div id="expiration_inputs">
+                        <input id="card_month" name="card_month" type="text" inputmode="numeric" pattern="\d*"
+                            placeholder="MM" minlength="2" maxlength="2" required>
+                        <input id="card_year" name="card_year" type="text" inputmode="numeric" pattern="\d*"
+                            placeholder="YY" minlength="2" maxlength="2" required>
+                    </div>
+                </div>
+            </div>
+            <div id="card_back">
+                <div id="card_stripe"></div>
+                <div id="card_cvc_div">
+                    <label id="cvc_label" for="card_cvc"> CVC/CVV </label>
+                    <input id="card_cvc" name="card_cvc" type="text" inputmode="numeric" pattern="\d*"
+                        placeholder="XXX-X" minlength="3" maxlength="4" required>
+                </div>
+            </div>
+        </div>
+        <div id="error_msg" class="hidden"></div>
+        <button id="submit" type="submit"> SUBMIT </button>
+    </form>
+</body>
+
+</html>
