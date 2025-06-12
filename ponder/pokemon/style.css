@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+}
+
+img {
+    width: 256px;
+    background-color: #EEE;
+    border-radius: 16px;
+}
+
+html {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+body {
+    text-align: center;
+    width: min-content;
+    margin: 0 auto;
+}
