@@ -73,6 +73,7 @@ hr {
     max-width: 100%;
     border-radius: 16px;
     flex-direction: row;
+    background-color: #EEE;
     border: 1px solid #666;
 }
 
@@ -97,8 +98,9 @@ hr {
 }
 
 .food_label {
-    padding: 4px;
     border-radius: 8px;
+    padding-block: 4px;
+    padding-inline: 8px;
     border: 1px solid #666;
     background-color: #EEE;
 }
