@@ -56,16 +56,17 @@ hr {
 }
 
 #search_results {
+    gap: 16px;
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 16px;
     justify-content: center;
 }
 
 .food {
     gap: 16px;
-    margin: 16px;
     display: flex;
     padding: 16px;
     flex-wrap: wrap;
