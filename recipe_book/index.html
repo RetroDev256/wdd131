@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title> Recipe Book </title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Recipe Book">
-    <meta name="author" content="Eric Petersen">
-    <meta property="og:title" content="Recipe Book">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="A collection of recipes">
-    <meta property="og:image"
-        content="https://retrodev256.github.io/wdd131/recipe_book/images/sweet-potato-waffle-md.jpg">
-    <meta property="og:url" content="https://retrodev256.github.io/wdd131/recipe_book">
-    <meta name="twitter:card"
-        content="https://retrodev256.github.io/wdd131/recipe_book/images/sweet-potato-waffle-md.jpg">
-    <link href="recipes.css" rel="stylesheet">
-    <script src="recipes.js" defer></script>
-    <title> Recipe Book </title>
-</head>
+        <link href="recipes.css" rel="stylesheet" />
 
-<body>
-    <header>
-        <img src="images/recipe-book.png" width=48 alt=""> RecipeBook
-    </header>
+        <script src="recipes.js" defer></script>
 
-    <main>
-        <div id="search_bar">
-            <input type="text" placeholder="Find a recipe...">
-            <img src="images/search.svg" width="32" alt="">
-        </div>
-        <hr>
-        <div id="search_results"></div>
-    </main>
+        <!-- og:description defaults to description, so we shouldn't include it -->
+        <!-- twitter:card defaults to og:image, so we shouldn't include it -->
+        <meta property="og:title" content="Recipe Book" />
+        <meta property="og:type" content="website" />
+        <!-- <meta property="og:description" content="A collection of recipes" /> -->
+        <meta
+            property="og:image"
+            content="https://retrodev256.github.io/wdd131/recipe_book/images/sweet-potato-waffle-md.jpg" />
+        <meta property="og:url" content="https://retrodev256.github.io/wdd131/recipe_book" />
+        <!-- <meta
+            name="twitter:card"
+            content="https://retrodev256.github.io/wdd131/recipe_book/images/sweet-potato-waffle-md.jpg" /> -->
 
-    <footer>
-        <div class="social">
-            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
-            <a href="#"><img src="images/instagram_icon.svg" width=48 alt="instagram icon"></a>
-            <a href="#"><img src="images/youtube_icon.svg" width=48 alt="youtube icon"></a>
-            <a href="#"><img src="images/pinterest_icon.svg" width=48 alt="pinterest icon"></a>
-        </div>
-        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
-            Recipe icons created by Freepik - Flaticon
-        </a>
-    </footer>
-</body>
+        <meta name="author" content="Eric Petersen" />
+        <meta name="description" content="A collection of recipes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
 
+    <body>
+        <header> <img src="images/recipe-book.png" width="48" alt="" /> RecipeBook </header>
+
+        <main>
+            <div id="search_bar">
+                <input id="search" type="text" placeholder="Find a recipe..." />
+                <img src="images/search.svg" width="32" alt="" />
+            </div>
+            <hr />
+            <div id="search_results"></div>
+        </main>
+
+        <footer>
+            <div class="social">
+                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+                <a href="#"><img src="images/instagram_icon.svg" width="48" alt="instagram icon" /></a>
+                <a href="#"><img src="images/youtube_icon.svg" width="48" alt="youtube icon" /></a>
+                <a href="#"><img src="images/pinterest_icon.svg" width="48" alt="pinterest icon" /></a>
+            </div>
+            <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
+                Recipe icons created by Freepik - Flaticon
+            </a>
+        </footer>
+    </body>
 </html>

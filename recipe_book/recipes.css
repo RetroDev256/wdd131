@@ -17,7 +17,6 @@ main {
     flex-grow: 1;
     display: flex;
     max-width: 2000px;
-    align-self: center;
     padding-inline: 16px;
     flex-direction: column;
 }
@@ -29,7 +28,6 @@ main {
     display: flex;
     margin-top: 32px;
     padding-inline: 16px;
-    align-items: center;
 }
 
 #search_bar input {
@@ -42,7 +40,6 @@ main {
 #search_bar img {
     height: 80%;
     user-select: none;
-    align-self: center;
 }
 
 #search_bar img:hover {
@@ -57,10 +54,8 @@ hr {
 
 #search_results {
     gap: 16px;
-    flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     margin-bottom: 16px;
     justify-content: center;
 }
