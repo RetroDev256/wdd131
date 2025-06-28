@@ -356,6 +356,11 @@ function recipeTemplate(recipe) {
     return template;
 }
 
+// returns a pseudo-random integer in range [0, limit)
+function nextInt(limit) {
+    return Math.floor(Math.random() * limit);
+}
+
 // Whenever the input field is typed in, update the listing of
 // recipes - this works because we don't have very many to search
 // through. If we had hundreds of thousands, it would be better to
@@ -372,4 +377,11 @@ function updateListing() {
     search_results.innerHTML = templates.join("");
 }
 
-updateListing();
+// Start off the page load with a random recipe
+function init() {
+    const index = nextInt(sorted_recipes.length);
+    const recipe = sorted_recipes[index];
+    search_results.innerHTML = recipeTemplate(recipe);
+}
+
+init();
