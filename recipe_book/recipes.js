@@ -278,38 +278,41 @@ const recipes = [
     },
 ];
 
+// Filtering can't reorder our recipes
 const sorted_recipes = recipes.sort((a, b) => {
     const a_lower = a.name.toLowerCase();
     const b_lower = b.name.toLowerCase();
     return a_lower > b_lower;
 });
 
-function includesNoCase(haystack, needle_lower) {
-    const lower = haystack.toLowerCase();
-    return lower.includes(needle_lower);
+// Case-insensitive "includes" function
+function includesNoCase(haystack, needle) {
+    const haystack_lower = haystack.toLowerCase();
+    const needle_lower = needle.toLowerCase();
+    return haystack_lower.includes(needle_lower);
 }
 
-function includesListNoCase(haystack, needle_lower) {
-    haystack.forEach((substr) => {
-        if (includesNoCase(substr, substr)) return true;
-    });
-    return false;
+// includesNoCase for multiple strings
+function includesListNoCase(haystack, needle) {
+    return haystack.some((substr) => includesNoCase(substr, needle));
 }
 
+// return the recipes that match the query in their
+// name, date, description, ingredients, author, or tags.
 function filterRecipes(query) {
-    const query_lower = query.toLowerCase();
     return sorted_recipes.filter(
         (recipe) =>
-            includesNoCase(recipe.name, query_lower) ||
-            includesNoCase(recipe.datePublished, query_lower) ||
-            includesNoCase(recipe.description, query_lower) ||
-            includesNoCase(recipe.author, query_lower) ||
-            includesListNoCase(recipe.tags, query_lower) ||
-            includesListNoCase(recipe.recipeInstructions, query_lower) ||
-            includesListNoCase(recipe.recipeIngredient, query_lower)
+            includesNoCase(recipe.name, query) ||
+            includesNoCase(recipe.datePublished, query) ||
+            includesNoCase(recipe.description, query) ||
+            includesNoCase(recipe.author, query) ||
+            includesListNoCase(recipe.tags, query) ||
+            includesListNoCase(recipe.recipeIngredient, query)
     );
 }
 
+// Convert a numerical rating to a string -
+// eg. "4.5" would convert to "★★★★☆".
 function stars(rating) {
     switch (parseInt(rating)) {
         case 0:
@@ -327,6 +330,8 @@ function stars(rating) {
     }
 }
 
+// Build a HTML template for a recipe, consisting of
+// it's image, tags, name, rating, and description.
 function recipeTemplate(recipe) {
     let template = `
         <div class="food">
@@ -350,6 +355,12 @@ function recipeTemplate(recipe) {
 
     return template;
 }
+
+// Whenever the input field is typed in, update the listing of
+// recipes - this works because we don't have very many to search
+// through. If we had hundreds of thousands, it would be better to
+// only sort when the user explicitly requested it, such as pressing
+// the search button.
 
 const search = document.getElementById("search");
 const search_results = document.getElementById("search_results");
