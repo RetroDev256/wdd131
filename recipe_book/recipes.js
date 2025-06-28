@@ -372,8 +372,12 @@ const search_results = document.getElementById("search_results");
 search.addEventListener("input", updateListing);
 
 function updateListing() {
-    const filtered = filterRecipes(search.value);
-    const templates = filtered.map(recipeTemplate);
+    renderRecipes(filterRecipes(search.value));
+}
+
+// This function is required by the assignment.
+function renderRecipes(recipe_list) {
+    const templates = recipe_list.map(recipeTemplate);
     search_results.innerHTML = templates.join("");
 }
 
