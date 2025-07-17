@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Eric Petersen" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Idle game description page for Brownie Clicker" />
+
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="game.css" />
+        <link rel="icon" type="image/png" href="/images/brownie.webp" />
+
+        <!-- TODO: OpenGraph stuff -->
+
+        <title> Brownie Clicker </title>
+        <script src="game.js" defer></script>
+    </head>
+
+    <body>
+        <nav>
+            <a href="/" aria-label="home">
+                <img id="logo" src="/images/brownie.webp" width="48" height="48" alt="" />
+            </a>
+            <a id="site_title" href="/" aria-label="home"> Brownie Clicker </a>
+            <a href="https://www.paypal.com/donate/?business=2Z3H3UQA37LML" target="_blank">
+                <img src="/images/paypal.svg" width="32" height="32" alt="" />
+            </a>
+            <a href="https://github.com/RetroDev256" target="_blank">
+                <img src="/images/github_white.svg" width="32" height="32" alt="" />
+            </a>
+            <a href="https://www.youtube.com/@RetroDev256" target="_blank">
+                <img src="/images/youtube.svg" width="32" height="32" alt="" />
+            </a>
+        </nav>
+
+        <main>
+            <div id="news" class="text"> THIS PAGE REQUIRES JS </div>
+            <div id="game_container">
+                <div id="left_side">
+                    <img id="brownie" src="images/brownie.webp" width="100%" />
+                    <p id="brownie_count" class="text"> THIS PAGE REQUIRES JS </p>
+                    <p id="per_second" class="text"> THIS PAGE REQUIRES JS </p>
+                </div>
+                <div id="right_side">
+                    <!-- This div stores worker interfaces -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p> &copy; <span id="year">2025</span> Eric Petersen. All rights reserved. </p>
+            <script>
+                // I refuse to put this singular line of code into a separate file.
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+/* HTML content set up for sticky footer */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    padding: 4px;
+    line-height: 1;
+}
+
+/* Navigation */
+
+#site_title {
+    flex-grow: 1;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+nav {
+    gap: 16px;
+    padding: 4px;
+    display: flex;
+    padding-right: 16px;
+    align-items: center;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+#logo {
+    border-radius: 4px;
+}
+
+nav * {
+    display: block;
+}
+
+/* Colors */
+
+#site_title {
+    color: #c04;
+}
+
+nav {
+    border-color: #000;
+    background-color: #0d0d0d;
+}
+
+body {
+    color: #ccc;
+    background-color: #0b0b0f;
+}

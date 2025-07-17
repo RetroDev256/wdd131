@@ -1,0 +1,62 @@
+/* Main Content */
+
+main :is(p, p *) {
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    font-size: 32px;
+    border-width: 0px;
+    border-radius: 8px;
+    padding-block: 8px;
+    padding-inline: 24px;
+    font-family: sans-serif;
+}
+
+button a {
+    text-decoration: none;
+}
+
+/* General margins */
+
+main {
+    margin-block: 64px;
+}
+
+main button {
+    margin-top: 48px;
+}
+
+main h2 {
+    margin-top: 24px;
+}
+
+main p {
+    margin-top: 16px;
+}
+
+/* Fit 80 character width for monospace font */
+
+main {
+    width: 100%;
+    max-width: 800px;
+    align-self: center;
+    padding-inline: 1ch;
+}
+
+/* Colors */
+
+button {
+    background-color: #AAF;
+}
+
+button:hover {
+    background-color: #DDF;
+}
+
+button a {
+    color: black;
+}
