@@ -39,7 +39,7 @@ const worker_templates = [
         image: "images/depositor.png",
         description: "These EBPVD machines bombard brownies with electrons to coat more pans in more brownies.",
         per: 15_000,
-        base: 14_000_000,
+        base: 1_400_000,
     },
 ];
 
