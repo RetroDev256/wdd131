@@ -30,13 +30,12 @@
     border-radius: 4px;
     padding-block: 8px;
     padding-inline: 16px;
-    word-break: break-all;
     background-color: #222;
     border: 2px solid #334;
 }
 
 #news {
-    color: #ccc;
+    color: #bbb;
 }
 
 #brownie_count {
@@ -62,7 +61,7 @@ main {
     transition-duration: 75ms;
 }
 
-.brownie_particle {
+.particle {
     position: absolute;
     pointer-events: none;
     filter: contrast(1.2);
@@ -80,7 +79,6 @@ main {
     padding: 8px;
     display: flex;
     column-gap: 8px;
-    font-size: 18px;
     border-radius: 4px;
     align-items: center;
     background-color: #223;
@@ -88,16 +86,15 @@ main {
 }
 
 .worker_img {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     flex-shrink: 0;
-    padding-inline: 16px;
 }
 
 .worker_details {
     flex-grow: 1;
     line-height: 1;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .worker_count {
@@ -118,8 +115,8 @@ main {
 
 .worker_buy,
 .worker_sell {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     display: flex;
     aspect-ratio: 1;
     cursor: pointer;
@@ -155,4 +152,9 @@ main {
 
 .hidden {
     display: none;
+}
+
+.gray,
+.gray:hover {
+    background-color: #333;
 }

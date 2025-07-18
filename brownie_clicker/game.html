@@ -5,13 +5,18 @@
         <meta charset="UTF-8" />
         <meta name="author" content="Eric Petersen" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Idle game description page for Brownie Clicker" />
+        <meta name="description" content="Idle game based around clicking a brownie." />
 
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="game.css" />
         <link rel="icon" type="image/png" href="/images/brownie.webp" />
 
-        <!-- TODO: OpenGraph stuff -->
+        <meta property="og:title" content="Brownie Clicker" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://retrodev256.github.io/wdd131/brownie_clicker/images/brownie.webp" />
+        <meta property="og:image:width" content="2048" />
+        <meta property="og:image:height" content="2048" />
+        <meta property="og:url" content="https://retrodev256.github.io/wdd131/brownie_clicker/game.html" />
 
         <title> Brownie Clicker </title>
         <script src="game.js" defer></script>
@@ -23,13 +28,13 @@
                 <img id="logo" src="/images/brownie.webp" width="48" height="48" alt="" />
             </a>
             <a id="site_title" href="/" aria-label="home"> Brownie Clicker </a>
-            <a href="https://www.paypal.com/donate/?business=2Z3H3UQA37LML" target="_blank">
+            <a href="https://www.paypal.com/donate/?business=2Z3H3UQA37LML" aria-label="paypal" target="_blank">
                 <img src="/images/paypal.svg" width="32" height="32" alt="" />
             </a>
-            <a href="https://github.com/RetroDev256" target="_blank">
+            <a href="https://github.com/RetroDev256" aria-label="github" target="_blank">
                 <img src="/images/github_white.svg" width="32" height="32" alt="" />
             </a>
-            <a href="https://www.youtube.com/@RetroDev256" target="_blank">
+            <a href="https://www.youtube.com/@RetroDev256" aria-label="youtube" target="_blank">
                 <img src="/images/youtube.svg" width="32" height="32" alt="" />
             </a>
         </nav>
@@ -38,7 +43,7 @@
             <div id="news" class="text"> THIS PAGE REQUIRES JS </div>
             <div id="game_container">
                 <div id="left_side">
-                    <img id="brownie" src="images/brownie.webp" width="100%" />
+                    <img id="brownie" src="images/brownie.webp" alt="brownie" width="100%" />
                     <p id="brownie_count" class="text"> THIS PAGE REQUIRES JS </p>
                     <p id="per_second" class="text"> THIS PAGE REQUIRES JS </p>
                 </div>
