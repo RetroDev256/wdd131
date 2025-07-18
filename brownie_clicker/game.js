@@ -312,15 +312,21 @@ async function loadGame() {
     // Attempt to load from the cookie data if it is present
     if (game_string) {
         const game = await loadFromString(game_string);
-        game_count = game.c;
-        game_rate = game.r;
-        game.d.forEach((data, idx) => {
-            workers[idx].data.count = data.c;
-            workers[idx].data.total = data.t;
-        });
+        game_count = game.c ? game.c : BigInt(0);
+        game_rate = game.r ? game.r : BigInt(0);
+
+        if (game.d) {
+            game.d.forEach((data, idx) => {
+                const count = data.c ? data.c : BigInt(0);
+                workers[idx].data.count = count;
+                const total = data.t ? data.t : BigInt(0);
+                workers[idx].data.total = total;
+            });
+        }
 
         // Fast-forward the game by the time we slept
-        const elapsed = Math.floor(Date.now() / 1000) - game.t;
+        const last = game.t ? game.t : BigInt(0);
+        const elapsed = Math.floor(Date.now() / 1000) - last;
         game_count += game_rate * BigInt(elapsed);
         workers.forEach((w) => {
             const rate = worker.data.per * worker.data.count;
