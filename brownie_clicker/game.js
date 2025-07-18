@@ -194,7 +194,7 @@ function workerBuy(event, worker) {
     game_rate += worker.data.per;
     worker.data.count += BigInt(1);
     worker_list.forEach(workerRender);
-    genParticle(event.clientX, event.clientY, worker.data.image);
+    genParticle(event.pageX, event.pageY, worker.data.image);
     statsRender();
 }
 
@@ -220,7 +220,7 @@ function initializeWorker(worker) {
 function brownieClick(event) {
     game_count += BigInt(1);
     worker_list.forEach(workerRender);
-    genParticle(event.clientX, event.clientY, "images/brownie.webp");
+    genParticle(event.pageX, event.pageY, "images/brownie.webp");
     statsRender();
 }
 
