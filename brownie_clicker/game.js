@@ -249,7 +249,7 @@ async function saveToString() {
     const data = worker_list.map((w) => {
         return { c: w.data.count, t: w.data.total };
     });
-    const time = Math.floor(Date.now() / 1000);
+    const time = BigInt(Math.floor(Date.now() / 1000));
     const game = { c: game_count, t: time, r: game_rate, d: data };
 
     // JSON does not support BigInt - we need to stringify it ourselves
@@ -326,11 +326,11 @@ async function loadGame() {
 
         // Fast-forward the game by the time we slept
         const last = game.t ? game.t : BigInt(0);
-        const elapsed = Math.floor(Date.now() / 1000) - last;
-        game_count += game_rate * BigInt(elapsed);
+        const elapsed = BigInt(Math.floor(Date.now() / 1000)) - last;
+        game_count += game_rate * elapsed;
         workers.forEach((w) => {
-            const rate = worker.data.per * worker.data.count;
-            w.data.total += rate * BigInt(elapsed);
+            const rate = w.data.per * w.data.count;
+            w.data.total += rate * elapsed;
         });
     }
 
