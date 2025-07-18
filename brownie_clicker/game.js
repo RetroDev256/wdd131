@@ -337,7 +337,7 @@ async function loadGame() {
 // Load a browser cookie if it is present, otherwise return null
 // The decodeURIComponent is required because the base64 can end in =
 function loadGameFromCookie() {
-    const cookies = document.cookkie.split("; ");
+    const cookies = document.cookie.split("; ");
     for (let i = 0; i < cookies.length; i += 1) {
         const [key, val] = cookies[i].split("=");
         if (key == "game") return decodeURIComponent(val);
