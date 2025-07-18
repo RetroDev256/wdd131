@@ -249,7 +249,8 @@ async function saveToString() {
     const data = worker_list.map((w) => {
         return { c: w.data.count, t: w.data.total };
     });
-    const game = { c: game_count, r: game_rate, d: data };
+    const time = Math.floor(Date.now() / 1000);
+    const game = { c: game_count, t: time, r: game_rate, d: data };
 
     // JSON does not support BigInt - we need to stringify it ourselves
     const game_json = JSON.stringify(game, (_, val) => {
@@ -317,6 +318,14 @@ async function loadGame() {
             workers[idx].data.count = data.c;
             workers[idx].data.total = data.t;
         });
+
+        // Fast-forward the game by the time we slept
+        const elapsed = Math.floor(Date.now() / 1000) - game.t;
+        game_count += game_rate * BigInt(elapsed);
+        workers.forEach((w) => {
+            const rate = worker.data.per * worker.data.count;
+            w.data.total += rate * BigInt(elapsed);
+        });
     }
 
     // The first worker is visible regardless of price
@@ -328,7 +337,7 @@ async function loadGame() {
 // Load a browser cookie if it is present, otherwise return null
 // The decodeURIComponent is required because the base64 can end in =
 function loadGameFromCookie() {
-    const cookies = document.cookie.split("; ");
+    const cookies = document.cookkie.split("; ");
     for (let i = 0; i < cookies.length; i += 1) {
         const [key, val] = cookies[i].split("=");
         if (key == "game") return decodeURIComponent(val);
