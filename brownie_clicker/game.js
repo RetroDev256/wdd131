@@ -1,4 +1,3 @@
-// List of pre-set identities for worker types
 const worker_templates = [
     {
         name: "Spatula",
@@ -15,7 +14,7 @@ const worker_templates = [
         base: 50,
     },
     {
-        name: "Mixer",
+        name: "Miss Mixer",
         image: "images/mixer.svg",
         description: "Fastest brownie batter mixer on the market. It consumes 2.3 Megawatts of electricity.",
         per: 50,
@@ -31,7 +30,7 @@ const worker_templates = [
     {
         name: "Brownie Box",
         image: "images/b_box.svg",
-        description: "A box to hold brownies. Nobody knows why they keep finding brownies in it.",
+        description: "A box to hold brownies. It's deeper than it looks. Fred fell in - we still haven't found him.",
         per: 1250,
         base: 150_000,
     },
@@ -40,7 +39,7 @@ const worker_templates = [
 const news_items = [
     { text: "You have a sudden craving for brownies.", min: 0 },
     { text: "You feel like making brownies.", min: 2 },
-    { text: "A batch of brownies gets burnt. Unfortunate.", min: 5 },
+    { text: "A batch of brownies got burnt. Unfortunate.", min: 5 },
     { text: "Your roommate eats all the brownies.", min: 20 },
     { text: "Your mother enjoys your brownies.", min: 50 },
     { text: "Your brownies are popular at school.", min: 100 },
