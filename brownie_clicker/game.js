@@ -31,8 +31,15 @@ const worker_templates = [
         name: "Brownie Box",
         image: "images/b_box.svg",
         description: "A box to hold brownies. It's deeper than it looks. Fred fell in - we still haven't found him.",
-        per: 1250,
+        per: 1_250,
         base: 150_000,
+    },
+    {
+        name: "Depositor",
+        image: "images/depositor.png",
+        description: "These EBPVD machines bombard brownies with electrons to coat more pans in more brownies.",
+        per: 15_000,
+        base: 14_000_000,
     },
 ];
 
