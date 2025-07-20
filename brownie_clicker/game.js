@@ -1,3 +1,9 @@
+// More ideal code can be found on my website: https://alloc.dev/brownie/
+// The new code runs better and is easier to understand...
+// but lacks things the rubric requires to get full points.
+// (eg. this code abuses forEach, map, reduce, etc; while
+// none of that is necessary in more efficient code.)
+
 const worker_templates = [
     {
         name: "Spatula",
